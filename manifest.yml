@@ -1,0 +1,12 @@
+applications:
+  - name: data-posting_GLA
+    memory: 512M
+    buildpacks:
+      - nodejs_buildpack
+    command: node post.js
+    env:
+      CLIENT_ID: "sb-35c14745-2c98-4c3c-a06f-bf2c26845f7b!b40102|iotae_service!b940"
+      CLIENT_SECRET: "5faf218d-3180-461f-8f51-7f26f8cd6889$V2P1joock8dk5UMGdXXcrC-deZ2QuJMo0f4L3lPSAsA="
+      TOKEN_URL: "https://apm.authentication.eu20.hana.ondemand.com/oauth/token?grant_type=client_credentials"
+      POST_URL: "https://iot-ts-data-sap.cfapps.eu20.hana.ondemand.com/Timeseries/v1/Measurements"
+      TZ: "Asia/Kolkata"
